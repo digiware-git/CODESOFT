@@ -17,7 +17,7 @@ void addTask(vector<Task> &tasks) {
     getline(cin, t.name);
     t.completed = false;
     tasks.push_back(t);
-    cout << "✅ Task added!\n";
+    cout << " Task added!\n";
 }
 
 void viewTasks(const vector<Task> &tasks) {
@@ -46,12 +46,12 @@ void markCompleted(vector<Task> &tasks) {
     cin >> n;
 
     if (n < 1 || n > (int)tasks.size()) {
-        cout << "❌ Invalid task number!\n";
+        cout << " Invalid task number!\n";
         return;
     }
 
     tasks[n - 1].completed = true;
-    cout << "✅ Marked as completed!\n";
+    cout << " Marked as completed!\n";
 }
 
 void removeTask(vector<Task> &tasks) {
@@ -71,7 +71,7 @@ void removeTask(vector<Task> &tasks) {
     }
 
     tasks.erase(tasks.begin() + (n - 1));
-    cout << "✅ Task removed!\n";
+    cout << " Task removed!\n";
 }
 
 int main() {
@@ -94,7 +94,7 @@ int main() {
             case 3: markCompleted(tasks); break;
             case 4: removeTask(tasks); break;
             case 0: cout << "Goodbye!\n"; break;
-            default: cout << "❌ Invalid choice!\n";
+            default: cout << " Invalid choice!\n";
         }
     } while (choice != 0);
 
